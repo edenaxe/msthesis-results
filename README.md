@@ -14,10 +14,13 @@
 
  <br>
  
-**Treatment Groups:**
+Treatment Groups:  
+***
  <img src="hello-website/Cell Treatments Table.png" width="400" height="400">
  
-**Sensor Locations:**
+   
+Sensor Locations:
+***
  <img src="hello-website/sensor locations.jpeg" width="500" height="500">
  
 <p>Copyright &copy; 2019 Eden Axelrad
