@@ -1,4 +1,4 @@
-# DATA
+# Data
 1. [Ambient Weather](hello-website/Ambient_Weather.html)
 2. [Inter-cell Analysis](hello-website/Interior_Temp_ANOVA.html)
 3. Individual Cell Results:
