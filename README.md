@@ -1,5 +1,4 @@
 # DATA
- <br>
 1. [Ambient Weather](hello-website/Ambient_Weather.html)
 2. [Inter-cell Analysis](hello-website/Interior_Temp_ANOVA.html)
 3. Individual Cell Results:
@@ -16,18 +15,19 @@
 <br>
  
 ***
-Treatment Groups:  
- <br> 
+## Treatment Groups:  
+
   <img src="hello-website/Cell Treatments Table.png" width="400" height="400">
  
 *** 
-Sensor Locations:
- <br>
+## Sensor Locations:
+
   <img src="hello-website/sensor locations.jpeg" width="500" height="500">
  
 *** 
-Study Site:
- <br>
+## Study Site:
+
   <img src="hello-website/study site birds eye.png" width="500" height="500">
- 
+
+ <br>
 <p>Copyright &copy; 2019 Eden Axelrad
