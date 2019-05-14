@@ -14,11 +14,12 @@
 
  <br>
  
+***
 Treatment Groups:  
 ***
  <img src="hello-website/Cell Treatments Table.png" width="400" height="400">
  
-   
+*** 
 Sensor Locations:
 ***
  <img src="hello-website/sensor locations.jpeg" width="500" height="500">
