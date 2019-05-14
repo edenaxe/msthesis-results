@@ -6,3 +6,6 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Ambient Weather"
+      href: Ambient_Weather.html
+      
