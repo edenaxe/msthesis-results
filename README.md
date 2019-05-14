@@ -1,5 +1,5 @@
-# MS Thesis Results
-## Eden Axelrad - MS Environmental Health Sciences, 2019
+# DATA
+ <br>
 1. [Ambient Weather](hello-website/Ambient_Weather.html)
 2. [Inter-cell Analysis](hello-website/Interior_Temp_ANOVA.html)
 3. Individual Cell Results:
@@ -13,21 +13,21 @@
    - [Cell 8 Results](hello-website/Cell_8_Results.html) 
 
 
- <br>
+<br>
  
 ***
 Treatment Groups:  
-<br> 
+ <br> 
   <img src="hello-website/Cell Treatments Table.png" width="400" height="400">
  
 *** 
 Sensor Locations:
-<br>
+ <br>
   <img src="hello-website/sensor locations.jpeg" width="500" height="500">
  
 *** 
 Study Site:
-<br>
+ <br>
   <img src="hello-website/study site birds eye.png" width="500" height="500">
  
 <p>Copyright &copy; 2019 Eden Axelrad
