@@ -1,8 +1,10 @@
 name: "my-website"
 navbar:
-  title: "My Website"
+  title: "Eden's MS Thesis Results Website"
   left:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Ambient Weather"
+      href: Ambient_Weather.html
