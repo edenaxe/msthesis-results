@@ -14,17 +14,19 @@
 
 <br>
  
-***
+
 ## Treatment Groups:  
 
   <img src="hello-website/Cell Treatments Table.png" width="400" height="400">
  
-*** 
+<br>
+
 ## Sensor Locations:
 
   <img src="hello-website/sensor locations.jpeg" width="500" height="500">
  
-*** 
+<br>
+
 ## Study Site:
 
   <img src="hello-website/study site birds eye.png" width="500" height="500">
