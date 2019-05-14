@@ -14,4 +14,6 @@
 
  <br>
  
+ ![alt text](hello-website/Cell Treatments Table.png)
+ 
 <p>Copyright &copy; 2019 Eden Axelrad
