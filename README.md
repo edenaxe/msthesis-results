@@ -12,3 +12,6 @@
    - [Cell 7 Results](hello-website/Cell_7_Results.html) 
    - [Cell 8 Results](hello-website/Cell_8_Results.html) 
 
+ <br>
+ 
+<p>Copyright &copy; 2019 Eden Axelrad. All rights reserved.</p>
