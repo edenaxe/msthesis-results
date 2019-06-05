@@ -16,7 +16,7 @@
 
 ## Study Site and Treatment Groups:
 
-  <img src="hello-website/sidebyside.png" width="500" height="500">
+  <img src="hello-website/sidebyside.png" width="1000" height="500">
 
 <br>
  
