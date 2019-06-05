@@ -21,15 +21,16 @@
  
 <br>
 
+## Study Site:
+
+  <img src="hello-website/study site birds eye.png" width="500" height="500">
+
+<br>
+ 
 ## Sensor Locations:
 
   <img src="hello-website/sensor locations.jpeg" width="500" height="500">
  
 <br>
 
-## Study Site:
-
-  <img src="hello-website/study site birds eye.png" width="500" height="500">
-
- <br>
 <p>Copyright &copy; 2019 Eden Axelrad
