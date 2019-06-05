@@ -1,6 +1,6 @@
 # Data
-1. [Ambient Weather](hello-website/Ambient_Weather.html)
-2. [Inter-cell Analysis](hello-website/Interior_Temp_ANOVA.html)
+1. [Main Analysis](hello-website/new_stats.html)
+2. [Ambient Weather](hello-website/Ambient_Weather.html)
 3. Individual Cell Results:
    - [Cell 1 Results](hello-website/Cell_1_Results.html) 
    - [Cell 2 Results](hello-website/Cell_2_Results.html) 
