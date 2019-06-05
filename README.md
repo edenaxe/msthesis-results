@@ -13,17 +13,10 @@
 
 
 <br>
- 
 
-## Treatment Groups:  
+## Study Site and Treatment Groups:
 
-  <img src="hello-website/Cell Treatments Table.png" width="400" height="400">
- 
-<br>
-
-## Study Site:
-
-  <img src="hello-website/study site birds eye.png" width="500" height="500">
+  <img src="hello-website/sidebyside.png" width="500" height="500">
 
 <br>
  
