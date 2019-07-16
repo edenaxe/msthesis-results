@@ -5,8 +5,7 @@
 - [Main Analysis](hello-website/new_stats.html)
 - [Ambient Weather](hello-website/Ambient_Weather.html)
 
-<hr size="10" border-color="#228B22">
-
+<br>
 <br>
 
 ## Study Site and Treatment Groups:
