@@ -2,7 +2,8 @@
 
 <br>
 
-- [Main Analysis](hello-website/new_stats.html)
+- [Summer Run Analysis](hello-website/Summer_Run.html)
+- [Spring Run Analysis](hello-website/new_stats.html)
 - [Ambient Weather](hello-website/Ambient_Weather.html)
 
 <br>
