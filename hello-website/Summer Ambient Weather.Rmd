@@ -1,0 +1,102 @@
+---
+title: "Summer Ambient Weather"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE, include=FALSE}
+library(knitr)
+library(rmdformats)
+library(tidyverse)
+library(circular)
+library(lattice)
+library(ggplot2)
+library(DT)
+library(leaflet)
+
+setwd("/Users/edenaxelrad/Desktop/Green Roofs (Thesis)/Summer Run")
+
+UCLA_weather <- read.csv("summer ambient.txt", sep = "")
+colnames(UCLA_weather) <- c("year","month","day","hour","minutes","wind_direction","wind_speed","gust","air_temp","min_temp","max_temp","relative_humid","min_rel_humid","max_rel_humid","dew_point","wet_bulb","sea_level_pressure","rainfall_hour","rainfall_day")
+
+UCLA_weather$min_tempC <- (UCLA_weather$min_temp - 32)/1.8
+UCLA_weather$max_tempC <- (UCLA_weather$max_temp - 32)/1.8
+UCLA_weather$air_tempC <- (UCLA_weather$air_temp - 32)/1.8
+
+UCLA_weather <- (unite(UCLA_weather, Date, c(year, month, day), remove = FALSE, sep = "-"))
+UCLA_weather$Date <- as.Date(UCLA_weather$Date, format = "%Y-%m-%d")
+
+Ambient_Daily <-
+  UCLA_weather %>% 
+  group_by(Date) %>%
+  summarize(mean(air_tempC), mean(min_tempC), mean(max_tempC), mean(wind_speed), mean(relative_humid), max(rainfall_day))
+  
+```
+
+# Meterological Info
+
+```{r, echo=FALSE, fig.align="center"}
+
+Ambient_Daily$Date <- as.Date(Ambient_Daily$Date)
+Ambient_Daily$`mean(wind_speed)` <- Ambient_Daily$`mean(wind_speed)`*1.60934
+
+Amb_d <- cbind.data.frame(Ambient_Daily$Date, Ambient_Daily$`mean(air_tempC)`, "(a) Mean Temp")
+colnames(Amb_d) <- c("Date", "Value", "Variable")
+
+rh <- cbind.data.frame(Ambient_Daily$Date, Ambient_Daily$`mean(relative_humid)`, "(b) Mean RH")
+colnames(rh) <- c("Date", "Value", "Variable")
+
+wind <- cbind.data.frame(Ambient_Daily$Date, Ambient_Daily$`mean(wind_speed)`, "(c) Mean Wind")
+colnames(wind) <- c("Date", "Value", "Variable")
+
+Ambient_Daily$rain_cm <- Ambient_Daily$`max(rainfall_day)`*2.54
+
+precip <- cbind.data.frame(Ambient_Daily$Date, Ambient_Daily$rain_cm, "(d) Precipitation")
+colnames(precip) <- c("Date", "Value", "Variable")
+
+ambient_4panel <- rbind.data.frame(Amb_d, rh, wind)
+
+Palette <- c("#F02D3A", "#FFBA08", "#136F63")
+
+ggplot(ambient_4panel, aes(x = Date, y = Value)) +
+  geom_line(aes(color = Variable), size = 1.5) + 
+  facet_grid(Variable ~ ., scales = "free_y") + theme(legend.position = "none") +
+  ylab("Cm                  Kph                    %                    °C") +
+  scale_colour_manual(values=Palette) + 
+  ggtitle("Meteorological Variables During the Study Period") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  geom_col(data=precip, fill="#3F88C5")
+
+```
+
+```{r, echo=FALSE, fig.align="center"}
+
+mean <- cbind.data.frame(as.Date(Ambient_Daily$Date), Ambient_Daily$`mean(air_tempC)`, "Mean Temp")
+colnames(mean) <- c("Date", "Temp", "mmm")
+max <- cbind.data.frame(as.Date(Ambient_Daily$Date), Ambient_Daily$`mean(max_tempC)`, "Max Temp")
+colnames(max) <- c("Date", "Temp", "mmm")
+min <- cbind.data.frame(as.Date(Ambient_Daily$Date), Ambient_Daily$`mean(min_tempC)`, "Min Temp")
+colnames(min) <- c("Date", "Temp", "mmm")
+
+temps <- rbind.data.frame(mean, max, min)
+colnames(temps) <- c("Date", "Temp", "mmm")
+
+ggplot(temps, aes(x=Date, y=Temp)) + 
+  geom_line(aes(color = mmm)) + 
+  ylim(c(12, 32)) +
+  labs(color = "") +
+  ggtitle("Average Daily Temperatures")
+
+```
+
+```{r, echo=FALSE}
+
+roundedAD <- round(Ambient_Daily[,2:8], digits = 3)
+roundedAD$Date <- Ambient_Daily$Date
+roundedAD <- roundedAD[,c(8,1:7)]
+datatable(roundedAD, class = 'cell-border stripe', options = list(pageLength = 10))
+```
+
+
+
